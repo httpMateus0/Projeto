@@ -1,11 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="/css/style.css">
 </head>
+
 <body>
 
+    <a href="/">Home</a> |
+    <a href="/sobre.html">Sobre</a> |
+    <a href="/contato.html">Contato</a>
+
+    <h1>Meu primeiro assistente</h1>
+
+    <input type="text" id="mensagem" placeholder="Digite uma mensagem">
+
+    <button onclick="enviarMensagem()">Enviar</button>
+
+    <p id="resposta"></p>
+
+    <script>
+        async function enviarMensagem() {
+
+            const mensagem = document.getElementById("mensagem").value;
+
+            const resposta = await fetch("/api/chat", {
+                method: "POST",
+
+                headers: {
+                    "Content-Type": "application/json"
+                },
+
+                body: JSON.stringify({
+                    mensagem: mensagem
+                })
+            });
+
+            const dados = await resposta.json();
+
+            document.getElementById("resposta").innerText =
+                dados.resposta;
+        }
+    </script>
+
+    <img src="/img/img1.png" width="500" alt="Apresentação">
+
 </body>
+
 </html>
