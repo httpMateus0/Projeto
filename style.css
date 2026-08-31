@@ -1,0 +1,45 @@
+/* RESET: Remove margens padrão e evita erros de tamanho */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configuração do Corpo do Site */
+body {
+    background-color: #f4f4f4; /* Fundo cinza bem claro e suave */
+    color: #333333;            /* Texto em cinza escuro para melhor leitura */
+    font-family: Arial, Helvetica, sans-serif; /* Fontes padrão seguras */
+    padding: 40px;             /* Afasta o conteúdo das bordas da tela */
+    line-height: 1.6;          /* Espaçamento confortável entre linhas */
+}
+
+/* Menu de Links */
+a {
+    color: #5384df;            /* Cor cinza média nos links */
+    text-decoration: none;     /* Remove o sublinhado padrão */
+    font-weight: bold;         /* Deixa o texto em negrito */
+    font-size: 16px;
+    align: center;
+}
+
+/* Efeito ao passar o mouse nos links */
+a:hover {
+    color: #000000;            /* O link fica preto ao passar o mouse */
+}
+
+
+/* Título Principal (meu primeiro assistente) */
+h1 {
+    color: #222222;            /* Título quase preto, destaque elegante */
+    font-size: 32px;           /* Tamanho do texto */
+    margin-bottom: 15px;       /* Espaço entre o título e o texto de baixo */
+}
+
+/* Imagens */
+img {
+    max-width: 100%;           /* Garante que a imagem não passe da tela */
+    height: auto;              /* Mantém a proporção da foto */
+    margin-top: 20px;          /* Afasta a imagem do texto de cima */
+    border-radius: 4px;        /* Arredonda levemente os cantos */
+}
